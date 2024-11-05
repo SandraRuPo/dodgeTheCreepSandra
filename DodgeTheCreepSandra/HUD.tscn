@@ -23,7 +23,7 @@ custom_fonts/font = SubResource( 1 )
 text = "0"
 align = 1
 
-[node name="Missatge" type="Label" parent="."]
+[node name="Message" type="Label" parent="."]
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
@@ -52,3 +52,6 @@ text = "Start"
 [node name="MessageTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+
+[connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]
